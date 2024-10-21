@@ -15,14 +15,14 @@ void puts(const char* str)
 	}
 }
 
-//void puts_f(const char far* str)
-//{
-//	while(*str)
-//	{
-//		putc(*str);
-//		str++;
-//	}
-//}
+void puts_f(const char far* str)
+{
+	while(*str)
+	{
+		putc(*str);
+		str++;
+	}
+}
 
 #define PRINTF_STATE_NORMAL 		       0
 #define PRINTF_STATE_LENGTH 		       1

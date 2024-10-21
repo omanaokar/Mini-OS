@@ -1,7 +1,7 @@
 Open Watcom Linker Version 2.0 beta Oct 14 2024 02:16:53 (32-bit)
 Copyright (c) 2002-2024 The Open Watcom Contributors. All Rights Reserved.
 Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
-Created on:       24/10/21 15:45:09
+Created on:       24/10/21 20:37:27
 Executable Image: /root/osproj/build/stage2.bin
 creating a RAW Binary Image executable
 
@@ -13,7 +13,7 @@ creating a RAW Binary Image executable
 Group                           Address              Size
 =====                           =======              ====
 
-DGROUP                          00000582             00000028
+DGROUP                          000008a8             0000009e
 
 
 
@@ -25,10 +25,10 @@ Segment                Class          Group          Address         Size
 =======                =====          =====          =======         ====
 
 _ENTRY                 CODE           AUTO           00000000        00000013
-_TEXT                  CODE           AUTO           00000013        0000056e
-CONST                  DATA           DGROUP         00000582        00000016
-CONST2                 DATA           DGROUP         00000598        00000011
-_DATA                  DATA           DGROUP         000005aa        00000000
+_TEXT                  CODE           AUTO           00000013        00000895
+CONST                  DATA           DGROUP         000008a8        0000008c
+CONST2                 DATA           DGROUP         00000934        00000011
+_DATA                  DATA           DGROUP         00000946        00000000
 
 
                         +----------------+
@@ -44,16 +44,25 @@ Address        Symbol
 Module: /root/osproj/build/stage2/asm/main.obj(main.asm)
 00000000       entry
 Module: /root/osproj/build/stage2/asm/x86.obj(x86.asm)
-00000013       _x86_div64_32
-00000041       _x86_Video_WriteCharTeletype
+00000013       __U4D
+0000003a       _x86_div64_32
+00000068       _x86_Video_WriteCharTeletype
+0000007a       _x86_Disk_Reset
+0000008f       _x86_Disk_Read
+000000c6       _x86_Disk_GetDriveParams
+Module: /root/osproj/build/stage2/c/disk.obj(disk)
+0000010a+      DISK_Initialize_
+0000017e+      DISK_LBA2CHS_
+00000231+      DISK_ReadSectors_
 Module: /root/osproj/build/stage2/c/main.obj(main)
-00000053       _cstart_
+000002ce       _cstart_
 Module: /root/osproj/build/stage2/c/stdio.obj(stdio)
-0000006d+      putc_
-00000094       puts_
-000000cb+      _printf
-0000030d+      printf_number_
-00000598+      _g_HexChars
+00000358+      putc_
+0000037f       puts_
+000003b6+      puts_f_
+000003f3       _printf
+00000634+      printf_number_
+00000934+      _g_HexChars
 
 
                         +---------------------+
@@ -67,15 +76,19 @@ Module          Segment               Class           Address         Size
 ======          =======               =====           =======         ====
 
 main.asm        _ENTRY                CODE           00000000         00000013
-x86.asm         _TEXT                 CODE           00000013         00000040
-main            _TEXT                 CODE           00000053         0000001a
-                CONST                 DATA           00000582         00000016
-                CONST2                DATA           00000598         00000000
-                _DATA                 DATA           000005aa         00000000
-stdio           _TEXT                 CODE           0000006d         00000514
-                CONST                 DATA           00000598         00000000
-                CONST2                DATA           00000598         00000011
-                _DATA                 DATA           000005aa         00000000
+x86.asm         _TEXT                 CODE           00000013         000000f7
+disk            _TEXT                 CODE           0000010a         000001c4
+                CONST                 DATA           000008a8         00000000
+                CONST2                DATA           00000934         00000000
+                _DATA                 DATA           00000946         00000000
+main            _TEXT                 CODE           000002ce         0000008a
+                CONST                 DATA           000008a8         0000008c
+                CONST2                DATA           00000934         00000000
+                _DATA                 DATA           00000946         00000000
+stdio           _TEXT                 CODE           00000358         00000550
+                CONST                 DATA           00000934         00000000
+                CONST2                DATA           00000934         00000011
+                _DATA                 DATA           00000946         00000000
 Warning! W1014: stack segment not found
 
 
@@ -84,6 +97,6 @@ Warning! W1014: stack segment not found
                         +-----------------------+
 
 Stack size:  0200 (512.)
-Memory size:  05aa (1450.)
+Memory size:  0946 (2374.)
 Entry point address: 00000000
-Link time: 00:00.00
+Link time: 00:00.20
