@@ -1,0 +1,41 @@
+fat.h(46): Error! E1127: Type required in parameter list
+fat.h(46): Error! E1022: Missing or misspelled data type near 'uin32_t'
+fat.c(56): Error! E1009: Expecting ',' but found '*'
+fat.c(58): Error! E1011: Symbol 'disk' has not been declared
+fat.c(58): Warning! W102: Parameter 1: Type mismatch (warning)
+fat.c(58): Note! I2003: source conversion type is 'int'
+fat.c(58): Note! I2004: target conversion type is 'DISK *'
+fat.c(56): Warning! W303: Parameter 'FILE' has been defined, but not referenced
+fat.c(81): Warning! W131: No prototype found for function 'FAT_ReadBootSectors'
+fat.c(88): Warning! W112: Pointer truncated
+fat.c(88): Note! I2003: source conversion type is 'unsigned char __far *'
+fat.c(88): Note! I2004: target conversion type is 'unsigned char *'
+fat.c(90): Error! E1011: Symbol 'fatSize' has not been declared
+fat.c(90): Error! E1011: Symbol 'MEMORY_FAT_SIZE' has not been declared
+fat.c(92): Warning! W131: No prototype found for function 'sizeOf'
+fat.c(92): Error! E1058: Cannot use typedef 'FAT_Data' as a variable
+fat.c(98): Error! E1058: Cannot use typedef 'FAT_Data' as a variable
+fat.c(103): Warning! W112: Pointer truncated
+fat.c(103): Note! I2003: source conversion type is 'FAT_DirectoryEntry __far *'
+fat.c(103): Note! I2004: target conversion type is 'FAT_DirectoryEntry *'
+fat.c(104): Error! E1011: Symbol 'FAR_DirectoryEntry' has not been declared
+fat.c(89): Warning! W202: Symbol 'size' has been defined, but not referenced
+fat.c(112): Warning! W107: Missing return value for function 'FAT_Initialize'
+fat.c(115): Error! E1022: Missing or misspelled data type near 'DirectoryEntry'
+fat.c(116): Warning! W304: Return type 'int' assumed for function 'findFile'
+fat.c(117): Error! E1011: Symbol 'g_BootSector' has not been declared
+fat.c(117): Error! E1032: Expression for '.' must be a 'structure' or 'union'
+fat.c(118): Warning! W131: No prototype found for function 'memcmp'
+fat.c(119): Warning! W113: Pointer type mismatch
+fat.c(119): Note! I2003: source conversion type is 'struct {...} *'
+fat.c(119): Note! I2004: target conversion type is 'int *'
+fat.c(126): Error! E1009: Expecting ',' but found '*'
+fat.c(129): Error! E1011: Symbol 'fileEntry' has not been declared
+fat.c(129): Error! E1033: Expression for '->' must be 'pointer to struct or union'
+fat.c(132): Error! E1011: Symbol 'g_BootSector' has not been declared
+fat.c(132): Error! E1032: Expression for '.' must be a 'structure' or 'union'
+fat.c(133): Warning! W131: No prototype found for function 'readSectors'
+fat.c(133): Error! E1011: Symbol 'disk' has not been declared
+fat.c(133): Error! E1032: Expression for '.' must be a 'structure' or 'union'
+fat.c(133): Error! E1011: Symbol 'outputBuffer' has not been declared
+fat.c(134): Error! E1147: Too many errors: compilation aborted
